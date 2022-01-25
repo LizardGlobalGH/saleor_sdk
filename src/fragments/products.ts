@@ -14,48 +14,8 @@ export const baseProductFragment = gql`
       url
       alt
     }
-    attributes {
-      attribute {
-        name
-        id
-        unit
-      }
-      values {
-        name
-      }
-    }
     thumbnail2x: thumbnail(size: 510) {
       url
-    }
-    variants {
-      id
-      name
-      quantityAvailable
-      media {
-        url
-      }
-      pricing {
-        price {
-          gross {
-            amount
-            currency
-          }
-          net {
-            amount
-            currency
-          }
-        }
-        priceUndiscounted {
-          gross {
-            amount
-            currency
-          }
-          net {
-            amount
-            currency
-          }
-          }
-        }
     }
   }
 `;
@@ -157,6 +117,16 @@ export const productFragment = gql`
               id
               name
               slug
+            }
+            attributes {
+              attribute {
+                name
+                id
+                unit
+              }
+              values {
+                name
+              }
             }
           }
         }
