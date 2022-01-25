@@ -118,6 +118,16 @@ export const productFragment = gql`
               name
               slug
             }
+            attributes {
+              attribute {
+                name
+                id
+                unit
+              }
+              values {
+                name
+              }
+            }
           }
         }
       }
