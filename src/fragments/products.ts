@@ -128,6 +128,9 @@ export const productFragment = gql`
                 name
               }
             }
+            variants {
+              ...ProductVariantFields
+            }
           }
         }
       }
