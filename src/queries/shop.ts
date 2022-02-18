@@ -12,6 +12,16 @@ export const getShop = gql`
         country
         code
       }
+      availableShippingMethods(channel: "default-channel") {
+        id
+        name
+        maximumOrderPrice {
+          amount
+        }
+        minimumOrderPrice {
+          amount
+        }
+      }
     }
   }
 `;
